@@ -13,6 +13,7 @@ eslint-plugin-no-relative-import-paths eslint-config-prettier
 
 ```
 ## Recommended Express Project Structure:
+```bash
 project-root/
 ├── src/
 │   ├── app.js              # Main app entry
@@ -26,4 +27,6 @@ project-root/
 │   └── user.test.js        # Test files
 ├── .eslintrc.js            # This config
 └── .eslintignore           # Add "node_modules/"
+
+```
 For a typescript project and documentaion of lint file see https://github.com/lamodots/Nodejs-Express-Typescrip-ESLint.eslintrc.js
