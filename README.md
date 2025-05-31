@@ -65,7 +65,13 @@ Add to package.json:
 ```
 
 ## Triggers automatic linting:
+# 1. Install the enforcer  
+npm install husky --save-dev  
 
+# 2. Arm it with your ESLint config  
+npx husky add .husky/pre-commit "npm run lint:fix && npm test"  
+
+# 3. Watch junior devs cry happy tears 😭➡️😊  
     Runs your lint:fix script before every commit
 
     Executes ESLint with --fix option
