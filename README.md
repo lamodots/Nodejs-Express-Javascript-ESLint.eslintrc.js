@@ -65,18 +65,26 @@ Add to package.json:
 ```
 
 ## Triggers automatic linting:
-# 1. Install the enforcer  
+### 1. Install the enforcer  
 npm install husky --save-dev  
 
-# 2. Arm it with your ESLint config  
+### 2. Arm it with your ESLint config  
 npx husky add .husky/pre-commit "npm run lint:fix && npm test"  
 
-# 3. Watch junior devs cry happy tears 😭➡️😊  
+### 3. Watch junior devs cry happy tears 😭➡️😊  
     Runs your lint:fix script before every commit
 
     Executes ESLint with --fix option
 ```bash
 npx husky add .husky/pre-commit "npm run lint:fix"
 
+```
+
+## Pro tip: Add this to your CI pipeline for DOUBLE protection
+```yaml
+# GitHub Actions example
+- name: Lint Check  
+  run: npm run lint  
+  if: ${{ always() }} # Even if tests fail!  
 ```
 For a typescript project and documentaion of lint file see https://github.com/lamodots/Nodejs-Express-Typescrip-ESLint.eslintrc.js
